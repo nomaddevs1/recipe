@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem; margin: 20px">
+    <a href="#" class="list-group-item clearfix" (click)="selectedRecipe(recipe)">
+        <img src={{recipe.imageUrl}} class="card-img-top" alt="">
+        <div class="card-body">
+            <h4 class="card-title">
+                {{ recipe.name }}
+            </h4>
+            <p class="card-text">{{recipe.description}}</p>
+        </div>
+    </a>
+</div>

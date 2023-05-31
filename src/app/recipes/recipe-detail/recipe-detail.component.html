@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img src="{{recipe.imageUrl}}" alt="" class="img-responsive" style="max-height:300px">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>Recipe Name: {{recipe.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-groupopen">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#navbarNavDark"
+                aria-controls="navbarNavDark" aria-expanded="false" appDropdown [cl]="'dropdown-menu'"
+                aria-label="Toggle navigation">Manage
+                Recipe
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="navbarNavDark">
+                <li><a href="#" class="dropdown-item"> To Shopping List</a></li>
+                <li><a href="#" class="dropdown-item"> Edit Recipe</a></li>
+                <li><a href="#" class="dropdown-item">Delete Recipe</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">Description: {{recipe.description}}</div>
+</div>
+<div class="row">
+    <div class="col-xs-12">Ingredients</div>
+</div>
