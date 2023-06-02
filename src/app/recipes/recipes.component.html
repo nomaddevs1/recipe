@@ -1,8 +1,12 @@
-<div class="row" style="margin:20px">
-    <div class="col">
-        <app-recipe-list (recipeDetail)="getRecipe($event)"></app-recipe-list>
-    </div>
-    <div class="col-sm-6">
-        <app-recipe-detail [recipe]="recipe"></app-recipe-detail>
-    </div>
+<div class="row">
+  <div class="col-md-5">
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-7">
+    <!-- <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <app-load-component></app-load-component>
+    </ng-template> -->
+    <router-outlet></router-outlet>
+  </div>
 </div>

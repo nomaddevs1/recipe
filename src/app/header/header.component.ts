@@ -1,15 +1,13 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  collapsed: boolean = true;
-  @Output('links') link = new EventEmitter<string>();
+  @Output() featureSelected = new EventEmitter<string>();
 
-  setLink(e) {
-    this.link.emit(e.target.textContent.toLowerCase());
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
   }
 }

@@ -1,11 +1,10 @@
-<div class="card" style="width: 18rem; margin: 20px">
-    <a href="#" class="list-group-item clearfix" (click)="selectedRecipe(recipe)">
-        <img src={{recipe.imageUrl}} class="card-img-top" alt="">
-        <div class="card-body">
-            <h4 class="card-title">
-                {{ recipe.name }}
-            </h4>
-            <p class="card-text">{{recipe.description}}</p>
-        </div>
-    </a>
-</div>
+<a style="cursor: pointer" class="list-group-item clearfix" (click)="onSelected()" [routerLink]="['/recipes', id]"
+  routerActiveLink="active">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="pull-right">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 50px;">
+  </span>
+</a>

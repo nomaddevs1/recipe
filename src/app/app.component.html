@@ -1,11 +1,8 @@
-<app-header (links)="setLink($event)"></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="link==='recipes'else shop"></app-recipes>
-      <ng-template #shop>
-        <app-shopping-list></app-shopping-list>
-      </ng-template>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
